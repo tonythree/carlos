@@ -1,0 +1,13 @@
+service: carlos-clase2
+app: carlos
+org: tonythree
+provider:
+  name: aws
+  runtime: python3.8
+functions:
+  carlos:
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: get
